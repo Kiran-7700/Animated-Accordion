@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato",sans-serif;
+}
+body{
+  background-color: #fffdfb;
+}
+.accordion{
+    width: 50%;
+    margin: 150px auto ;
+    
+}
+.item{
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+h2{
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.number{
+    font-size: 32px;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    color: #186;
+}
+.hiddenBox{
+    grid-column: 2/3;
+    display: none;
+}
+img{
+    grid-column: 2/3;
+    height: 250px;
+    width: 480px;
+}
+.hiddenBox p{
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+}
+
+.hiddenBox ul li{
+    margin-left: 16px;
+    line-height: 1.5;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+}
+.hiddenBox ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.active{
+    position: relative;
+}
+.active::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    border-top: 3px solid #1864ab;
+    animation: borderline 2s linear forwards;
+}
+
+@keyframes borderline{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.active .hiddenBox{
+    display: block;
+}
+.text-center{
+    position: absolute;
+    top: 76px;
+    left: 45%;
+    font-family: 'Dancing Script', cursive;
+}
